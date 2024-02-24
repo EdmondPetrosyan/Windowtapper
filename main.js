@@ -29,7 +29,6 @@ async function start() {
  
     width += 50
     height += 50
-
     await wait(9000)
 
     const green = window.open("Windows/green.html", "_Blank","popup=true,left=10,top=10")
@@ -98,23 +97,27 @@ async function start() {
     const black = window.open("Windows/black.html", "_Blank","popup=true,left=10,top=10")
     black.resizeTo(500,500)
     black.moveTo(window.innerWidth / 2 - width, height / 2 + height)
- 
-
-
-    await wait(40000)
+  
+    width += 50
+    height += 50
+    
+    await wait(54000)
 
     const orange = window.open("Windows/orange.html", "_Blank","popup=true,left=10,top=10")
     orange.resizeTo(500,500)
     orange.moveTo(window.innerWidth / 2 - width, height / 2 + height)
 
-    await wait(5000)
-    window.close("Windows/orange.html")
-    window.close("Windows/yellow.html")
-    window.close("Windows/teal.html")
-    window.close("Windows/coral.html")
-    window.close("Windows/purple.html")
-    window.close("Windows/white.html")
-    window.close("Windows/blue.html")
-    window.close("Windows/green.html")
-    window.close("Windows/red.html")
+    await wait(18000)
+
+    red.close()
+    green.close()
+    blue.close()
+    white.close()
+    purple.close()
+    coral.close()
+    teal.close()
+    yellow.close()
+    black.close()
+    orange.close()
+    window.close()
 }
